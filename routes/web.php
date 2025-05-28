@@ -9,9 +9,10 @@ Route::put('categories/{id}/edit',[App\Http\Controllers\CategoryController::clas
 Route::get('categories/{id}/delete',[App\Http\Controllers\CategoryController::class,'destroy']);
 
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('form');
 
 });
-
 

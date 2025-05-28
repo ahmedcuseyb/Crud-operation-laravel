@@ -1,6 +1,15 @@
-<x-slot name="title">
-    Edit Categories
-</x-slot>
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">   
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laravel Challenge</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-gray-100">
 
 <div class="max-w-4xl mx-auto py-8">
 
@@ -18,7 +27,6 @@
                 Back
             </a>
         </div>
-
         <form action="{{ url('categories/'.$category->id.'/edit') }}" method="POST" class="space-y-6">
             @csrf
             {{-- editing --}}
@@ -57,3 +65,5 @@
         </form>
     </div>
 </div>
+<body>
+</Html>

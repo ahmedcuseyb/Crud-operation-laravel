@@ -12,6 +12,7 @@ class CategoryController extends Controller
         $categories = Category::get();
         // return $categories;
         return view('category.index', compact('categories'));
+
     }
     public function create()
     {
@@ -37,7 +38,8 @@ class CategoryController extends Controller
         ]);
 
         // Redirect to the index page with a success message
-        return redirect('categories/create')->with('status', 'Category created successfully.');
+        // return redirect('categories/create')->with('status', 'Category created successfully.');
+        return redirect('categories/')->with('status', 'Category created successfully.');
     }
 
     // editing and updating
@@ -67,8 +69,8 @@ class CategoryController extends Controller
         ]);
 
         // Redirect to the index page with a success message
-        // return redirect('categories/create')->with('status', 'Category created successfully.');
-        return redirect()->back()->with('status', 'Category updated successfully.');
+        return redirect('categories/')->with('status', 'Category updted successfully.');
+        // return redirect()->back()->with('status', 'Category updated successfully.');
     }
 
     // deleting
